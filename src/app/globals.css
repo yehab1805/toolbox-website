@@ -1,3 +1,6 @@
+/* Import prose styles for blog content */
+@import '@tailwindcss/typography';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

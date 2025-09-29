@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "test-post",
+    "title": "Test Post",
+    "date": "2024-01-16T10:00:00.000Z",
+    "author": "Test Author",
+    "tags": [
+      "test"
+    ],
+    "excerpt": "This is a test post",
+    "coverImage": "",
+    "content": "This is the content of the test post.",
+    "readingTime": 1,
+    "published": true
+  },
+  {
+    "slug": "welcome-to-toolbox-blog",
+    "title": "Welcome to ToolBox Blog",
+    "date": "2024-01-15T10:00:00.000Z",
+    "author": "ToolBox Team",
+    "tags": [
+      "welcome",
+      "introduction"
+    ],
+    "excerpt": "Welcome to our blog! Here you'll find tips, tutorials, and insights about productivity tools and study techniques.",
+    "coverImage": "",
+    "content": "Welcome to the ToolBox blog! We're excited to share valuable content about productivity tools, study techniques, and digital workflows.\n\nIn this blog, you'll find:\n\n- Tips for better productivity\n- Study techniques that actually work\n- Tool tutorials and guides\n- Digital workflow optimization\n\nStay tuned for regular updates and helpful content!",
+    "readingTime": 2,
+    "published": true
+  }
+]

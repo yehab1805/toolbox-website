@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { tools, categories } from '@/lib/tools'
+import { getAllPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://toolbox-website.vercel.app' // Replace with your actual domain
@@ -36,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly' as const,
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
   ]
 
   // Category pages
@@ -54,5 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: tool.featured ? 0.9 : 0.7,
   }))
 
-  return [...staticPages, ...categoryPages, ...toolPages]
+  // Blog pages
+  const blogPages = getAllPosts().map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...categoryPages, ...toolPages, ...blogPages]
 }

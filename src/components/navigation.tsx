@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import NoSSR from '@/components/no-ssr'
 import { 
   Menu, 
   X, 
@@ -16,7 +17,8 @@ import {
   Briefcase,
   File,
   Heart,
-  Settings
+  Settings,
+  PenTool
 } from 'lucide-react'
 import { categories } from '@/lib/tools'
 
@@ -41,29 +43,42 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors">
               <Home className="h-4 w-4" />
               <span>Home</span>
             </Link>
             
-            {categories.map((category) => (
-              <Link
-                key={category.id}
-                href={`/category/${category.id}`}
-                className="flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors"
-              >
-                {category.id === 'study' && <BookOpen className="h-4 w-4" />}
-                {category.id === 'business' && <Briefcase className="h-4 w-4" />}
-                {category.id === 'file' && <File className="h-4 w-4" />}
-                {category.id === 'fun' && <Heart className="h-4 w-4" />}
-                {category.id === 'utility' && <Settings className="h-4 w-4" />}
-                <span>{category.name}</span>
-                <Badge variant="secondary" className="ml-1">
-                  {category.tools.length}
-                </Badge>
-              </Link>
-            ))}
+            <Link href="/blog" className="flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors">
+              <PenTool className="h-4 w-4" />
+              <span>Blog</span>
+            </Link>
+            
+            <NoSSR fallback={<div className="flex items-center space-x-4">
+              <div className="h-4 w-16 bg-muted animate-pulse rounded"></div>
+              <div className="h-4 w-20 bg-muted animate-pulse rounded"></div>
+              <div className="h-4 w-18 bg-muted animate-pulse rounded"></div>
+              <div className="h-4 w-16 bg-muted animate-pulse rounded"></div>
+              <div className="h-4 w-20 bg-muted animate-pulse rounded"></div>
+            </div>}>
+              {categories.map((category) => (
+                <Link
+                  key={category.id}
+                  href={`/category/${category.id}`}
+                  className="flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors"
+                >
+                  {category.id === 'study' && <BookOpen className="h-4 w-4" />}
+                  {category.id === 'business' && <Briefcase className="h-4 w-4" />}
+                  {category.id === 'file' && <File className="h-4 w-4" />}
+                  {category.id === 'fun' && <Heart className="h-4 w-4" />}
+                  {category.id === 'utility' && <Settings className="h-4 w-4" />}
+                  <span>{category.name}</span>
+                  <Badge variant="secondary" className="ml-1">
+                    {category.tools.length}
+                  </Badge>
+                </Link>
+              ))}
+            </NoSSR>
           </div>
 
           {/* Right side actions */}
@@ -107,6 +122,15 @@ export default function Navigation() {
               >
                 <Home className="h-4 w-4" />
                 <span>Home</span>
+              </Link>
+              
+              <Link
+                href="/blog"
+                className="flex items-center space-x-2 text-sm font-medium hover:text-primary transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <PenTool className="h-4 w-4" />
+                <span>Blog</span>
               </Link>
               
               {categories.map((category) => (
