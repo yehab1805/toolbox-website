@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import ToolCardWithLoading from '@/components/tool-card-with-loading'
+import AdSenseAd from '@/components/adsense-ad'
 import { 
   Search, 
   Star,
@@ -135,6 +136,9 @@ export default function ToolsGrid() {
             ))}
           </div>
         </div>
+
+        {/* AdSense Ad */}
+        <AdSenseAd />
 
         {/* Tools grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
