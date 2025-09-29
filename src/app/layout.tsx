@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     canonical: "https://toolbox-website.vercel.app",
   },
   verification: {
-    google: "your-google-verification-code", // Replace with your actual verification code
+    google: "v5rMQ660SvQQn4kl4Jk8X-gFg7iGLUV0maUqobQF6TU",
   },
 };
 
