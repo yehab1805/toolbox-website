@@ -1,6 +1,14 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Settings, Users, Zap, Shield, Globe, Heart } from 'lucide-react'
+import { generateMetadata } from '@/lib/seo'
+
+export const metadata = generateMetadata({
+  title: "About ToolBox - Your Ultimate Digital Toolbox",
+  description: "Learn about ToolBox, a comprehensive collection of 25+ free online tools for students, professionals, and everyday users. No registration required, no hidden costs.",
+  path: "/about",
+  keywords: ["about toolbox", "free online tools", "digital toolbox", "productivity tools", "study tools", "business tools"]
+});
 
 export default function AboutPage() {
   return (

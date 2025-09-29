@@ -18,14 +18,54 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ToolBox - All-in-One Digital Toolbox",
+  title: {
+    default: "ToolBox - All-in-One Digital Toolbox",
+    template: "%s | ToolBox"
+  },
   description: "Access 25+ free online tools for studying, business, file management, and daily tasks. No registration required, no hidden costs.",
-  keywords: "online tools, free tools, productivity, study tools, business tools, file tools",
+  keywords: "online tools, free tools, productivity, study tools, business tools, file tools, PDF tools, calculators, converters",
   authors: [{ name: "ToolBox Team" }],
+  creator: "ToolBox Team",
+  publisher: "ToolBox",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: "ToolBox - All-in-One Digital Toolbox",
-    description: "Access 25+ free online tools for studying, business, file management, and daily tasks.",
     type: "website",
+    locale: "en_US",
+    url: "https://toolbox-website.vercel.app",
+    siteName: "ToolBox",
+    title: "ToolBox - All-in-One Digital Toolbox",
+    description: "Access 25+ free online tools for studying, business, file management, and daily tasks. No registration required, no hidden costs.",
+    images: [
+      {
+        url: "https://toolbox-website.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ToolBox - All-in-One Digital Toolbox",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ToolBox - All-in-One Digital Toolbox",
+    description: "Access 25+ free online tools for studying, business, file management, and daily tasks. No registration required, no hidden costs.",
+    images: ["https://toolbox-website.vercel.app/og-image.png"],
+    creator: "@toolbox",
+  },
+  alternates: {
+    canonical: "https://toolbox-website.vercel.app",
+  },
+  verification: {
+    google: "your-google-verification-code", // Replace with your actual verification code
   },
 };
 

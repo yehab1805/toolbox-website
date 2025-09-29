@@ -13,7 +13,11 @@
     "deploy": "vercel --prod",
     "analyze": "ANALYZE=true npm run build",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
-    "perf": "npm run build && npm run start & sleep 5 && npm run lighthouse"
+    "perf": "npm run build && npm run start & sleep 5 && npm run lighthouse",
+    "seo:generate": "node scripts/generate-tool-metadata.js",
+    "seo:update": "node scripts/update-tool-pages.js",
+    "seo:og-image": "node scripts/create-og-image.js",
+    "seo:check": "npm run build && npm run lighthouse"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { categories } from '@/lib/tools'
+import { generateCategoryMetadata } from '@/lib/seo'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -42,6 +43,19 @@ interface CategoryPageProps {
   params: {
     categoryId: string
   }
+}
+
+export async function generateMetadata({ params }: CategoryPageProps) {
+  const category = categories.find(cat => cat.id === params.categoryId)
+  
+  if (!category) {
+    return {
+      title: 'Category Not Found',
+      description: 'The requested category could not be found.'
+    }
+  }
+
+  return generateCategoryMetadata(category)
 }
 
 const iconMap = {
