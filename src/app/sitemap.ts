@@ -3,7 +3,7 @@ import { tools, categories } from '@/lib/tools'
 import { getAllPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://toolbox-website.vercel.app' // Replace with your actual domain
+  const baseUrl = 'https://toolbox-foryou.vercel.app' // Replace with your actual domain
   
   // Static pages
   const staticPages = [
