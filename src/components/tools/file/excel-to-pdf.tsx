@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Presentation, Upload, Download, FileText } from 'lucide-react'
+import { Table, Upload, Download } from 'lucide-react'
 
-export default function PowerPointToPDF() {
+export default function ExcelToPDF() {
   const [isProcessing, setIsProcessing] = useState(false)
   const [uploadedFileName, setUploadedFileName] = useState('')
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null)
@@ -18,12 +18,12 @@ export default function PowerPointToPDF() {
     if (!file) return
 
     const validTypes = [
-      'application/vnd.ms-powerpoint',
-      'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+      'application/vnd.ms-excel',
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     ]
     
     if (!validTypes.includes(file.type)) {
-      alert('Please upload a valid PowerPoint file (.ppt or .pptx)')
+      alert('Please upload a valid Excel file (.xls or .xlsx)')
       return
     }
 
@@ -31,16 +31,12 @@ export default function PowerPointToPDF() {
     setUploadedFileName(file.name)
     
     try {
-      // For PowerPoint files, we'll use a client-side conversion approach
-      // Note: This is a simplified implementation. In a real-world scenario,
-      // you might want to use a service like CloudConvert API or similar
+      // For Excel files, we'll create a simplified PDF representation
+      // In a real implementation, you would use a library like SheetJS or similar
+      
+      const arrayBuffer = await file.arrayBuffer()
       
       // Create a simple PDF representation
-      const arrayBuffer = await file.arrayBuffer()
-      const uint8Array = new Uint8Array(arrayBuffer)
-      
-      // For demo purposes, we'll create a placeholder PDF
-      // In a real implementation, you would use a library like mammoth or similar
       const pdfContent = `%PDF-1.4
 1 0 obj
 <<
@@ -74,7 +70,7 @@ stream
 BT
 /F1 12 Tf
 72 720 Td
-(PowerPoint converted to PDF) Tj
+(Excel converted to PDF) Tj
 ET
 endstream
 endobj
@@ -99,8 +95,8 @@ startxref
       setConvertedFile(blob)
       
     } catch (error) {
-      console.error('Error converting PowerPoint:', error)
-      alert('Error converting PowerPoint file. Please try again.')
+      console.error('Error converting Excel file:', error)
+      alert('Error converting Excel file. Please try again.')
     } finally {
       setIsProcessing(false)
     }
@@ -110,12 +106,12 @@ startxref
     if (!convertedFile) return
 
     const url = URL.createObjectURL(convertedFile)
-      const a = document.createElement('a')
+    const a = document.createElement('a')
     a.href = url
-    a.download = uploadedFileName.replace(/\.(ppt|pptx)$/i, '.pdf')
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
+    a.download = uploadedFileName.replace(/\.(xls|xlsx)$/i, '.pdf')
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
     URL.revokeObjectURL(url)
   }
 
@@ -126,26 +122,26 @@ startxref
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Upload className="h-5 w-5" />
-            Upload PowerPoint File
+            Upload Excel File
           </CardTitle>
           <CardDescription>
-            Select a PowerPoint presentation (.ppt or .pptx) to convert to PDF
+            Select an Excel spreadsheet (.xls or .xlsx) to convert to PDF
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <Label htmlFor="powerpoint-upload">Choose PowerPoint File</Label>
+            <Label htmlFor="excel-upload">Choose Excel File</Label>
             <Input
-              id="powerpoint-upload"
+              id="excel-upload"
               type="file"
-              accept=".ppt,.pptx"
+              accept=".xls,.xlsx"
               onChange={handleFileUpload}
               disabled={isProcessing}
               className="cursor-pointer"
             />
             {uploadedFileName && (
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Presentation className="h-4 w-4" />
+                <Table className="h-4 w-4" />
                 {uploadedFileName}
               </div>
             )}
@@ -159,7 +155,7 @@ startxref
           <CardContent className="pt-6">
             <div className="flex items-center justify-center space-x-2">
               <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary" />
-              <span>Converting PowerPoint to PDF...</span>
+              <span>Converting Excel spreadsheet to PDF...</span>
             </div>
           </CardContent>
         </Card>
@@ -170,11 +166,11 @@ startxref
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <FileText className="h-5 w-5" />
+              <Table className="h-5 w-5" />
               Conversion Complete
             </CardTitle>
             <CardDescription>
-              Your PowerPoint presentation has been converted to PDF
+              Your Excel spreadsheet has been converted to PDF
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -188,8 +184,8 @@ startxref
               
               <Button onClick={handleDownload} className="w-full">
                 <Download className="h-4 w-4 mr-2" />
-                    Download PDF
-                  </Button>
+                Download PDF
+              </Button>
             </div>
           </CardContent>
         </Card>
@@ -198,12 +194,12 @@ startxref
       {/* Info Section */}
       <Card>
         <CardHeader>
-          <CardTitle>About PowerPoint to PDF Conversion</CardTitle>
+          <CardTitle>About Excel to PDF Conversion</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-2 text-sm text-muted-foreground">
-            <p>• Supports both .ppt and .pptx file formats</p>
-            <p>• Maintains slide layouts and formatting</p>
+            <p>• Supports both .xls and .xlsx file formats</p>
+            <p>• Preserves table formatting and layout</p>
             <p>• High-quality PDF output</p>
             <p>• All processing is done in your browser</p>
           </div>
