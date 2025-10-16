@@ -295,7 +295,8 @@ export const tools: Tool[] = [
     description: 'Crop PDF pages to remove unwanted areas',
     icon: 'Crop',
     category: 'file',
-    path: '/tools/file/crop-pdf'
+    path: '/tools/file/crop-pdf',
+    featured: true
   },
   {
     id: 'edit-pdf',
@@ -303,7 +304,8 @@ export const tools: Tool[] = [
     description: 'Add text, highlights, and drawings to PDF',
     icon: 'Edit',
     category: 'file',
-    path: '/tools/file/edit-pdf'
+    path: '/tools/file/edit-pdf',
+    featured: true
   },
 
   // PDF Security Tools

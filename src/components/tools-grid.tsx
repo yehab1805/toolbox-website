@@ -43,7 +43,8 @@ import {
   PenTool,
   EyeOff,
   GitCompare,
-  Unlock
+  Unlock,
+  Crop
 } from 'lucide-react'
 import { tools } from '@/lib/tools'
 
@@ -80,7 +81,8 @@ const iconMap = {
   PenTool,
   EyeOff,
   GitCompare,
-  Unlock
+  Unlock,
+  Crop
 }
 
 export default function ToolsGrid() {

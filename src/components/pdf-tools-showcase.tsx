@@ -222,7 +222,7 @@ const pdfToolCategories = [
         description: 'Crop PDF pages to remove unwanted areas',
         icon: Crop,
         path: '/tools/file/crop-pdf',
-        available: false
+        available: true
       },
       {
         id: 'edit-pdf',
@@ -230,7 +230,7 @@ const pdfToolCategories = [
         description: 'Add text, highlights, and drawings to PDF',
         icon: Edit,
         path: '/tools/file/edit-pdf',
-        available: false
+        available: true
       }
     ]
   },
