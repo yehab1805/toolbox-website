@@ -43,7 +43,7 @@ const pdfToolCategories = [
         description: 'Sort and organize PDF pages automatically',
         icon: FileText,
         path: '/tools/file/organize-pdf',
-        available: false
+        available: true
       },
       {
         id: 'merge-pdf',
@@ -108,7 +108,7 @@ const pdfToolCategories = [
         description: 'Convert Word documents to PDF format',
         icon: FileText,
         path: '/tools/file/word-to-pdf',
-        available: false
+        available: true
       },
       {
         id: 'powerpoint-to-pdf',
@@ -116,7 +116,7 @@ const pdfToolCategories = [
         description: 'Convert PowerPoint presentations to PDF',
         icon: Presentation,
         path: '/tools/file/powerpoint-to-pdf',
-        available: false
+        available: true
       },
       {
         id: 'excel-to-pdf',
@@ -124,7 +124,7 @@ const pdfToolCategories = [
         description: 'Convert Excel spreadsheets to PDF format',
         icon: Table,
         path: '/tools/file/excel-to-pdf',
-        available: false
+        available: true
       },
       {
         id: 'html-to-pdf',
@@ -132,7 +132,7 @@ const pdfToolCategories = [
         description: 'Convert HTML files to PDF documents',
         icon: Code,
         path: '/tools/file/html-to-pdf',
-        available: false
+        available: true
       }
     ]
   },
@@ -157,7 +157,7 @@ const pdfToolCategories = [
         description: 'Convert PDF documents to Word format',
         icon: FileText,
         path: '/tools/file/pdf-to-word',
-        available: false
+        available: true
       },
       {
         id: 'pdf-to-powerpoint',
@@ -165,7 +165,7 @@ const pdfToolCategories = [
         description: 'Convert PDF to PowerPoint presentation',
         icon: Presentation,
         path: '/tools/file/pdf-to-powerpoint',
-        available: false
+        available: true
       },
       {
         id: 'pdf-to-excel',
@@ -173,7 +173,7 @@ const pdfToolCategories = [
         description: 'Convert PDF tables to Excel spreadsheets',
         icon: Table,
         path: '/tools/file/pdf-to-excel',
-        available: false
+        available: true
       },
       {
         id: 'pdf-to-pdfa',
@@ -181,7 +181,7 @@ const pdfToolCategories = [
         description: 'Convert PDF to PDF/A format for archiving',
         icon: Archive,
         path: '/tools/file/pdf-to-pdfa',
-        available: false
+        available: true
       }
     ]
   },
@@ -247,7 +247,7 @@ const pdfToolCategories = [
         description: 'Remove password protection from PDF files',
         icon: Unlock,
         path: '/tools/file/unlock-pdf',
-        available: false
+        available: true
       },
       {
         id: 'pdf-password',
@@ -263,7 +263,7 @@ const pdfToolCategories = [
         description: 'Add digital signatures to PDF documents',
         icon: PenTool,
         path: '/tools/file/sign-pdf',
-        available: false
+        available: true
       },
       {
         id: 'redact-pdf',
@@ -271,7 +271,7 @@ const pdfToolCategories = [
         description: 'Remove sensitive information from PDF files',
         icon: EyeOff,
         path: '/tools/file/redact-pdf',
-        available: false
+        available: true
       },
       {
         id: 'compare-pdf',
@@ -279,7 +279,7 @@ const pdfToolCategories = [
         description: 'Compare two PDF documents for differences',
         icon: GitCompare,
         path: '/tools/file/compare-pdf',
-        available: false
+        available: true
       }
     ]
   }

@@ -36,7 +36,14 @@ import {
   DollarSign,
   Home,
   Activity,
-  Zap
+  Zap,
+  Presentation,
+  Table,
+  Code,
+  PenTool,
+  EyeOff,
+  GitCompare,
+  Unlock
 } from 'lucide-react'
 import { tools } from '@/lib/tools'
 
@@ -66,7 +73,14 @@ const iconMap = {
   DollarSign,
   Home,
   Activity,
-  Zap
+  Zap,
+  Presentation,
+  Table,
+  Code,
+  PenTool,
+  EyeOff,
+  GitCompare,
+  Unlock
 }
 
 export default function ToolsGrid() {

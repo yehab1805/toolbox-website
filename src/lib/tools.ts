@@ -94,7 +94,8 @@ export const tools: Tool[] = [
     description: 'Sort and organize PDF pages automatically',
     icon: 'FileText',
     category: 'file',
-    path: '/tools/file/organize-pdf'
+    path: '/tools/file/organize-pdf',
+    featured: true
   },
   {
     id: 'merge-pdf',
@@ -186,7 +187,8 @@ export const tools: Tool[] = [
     description: 'Convert Word documents to PDF format',
     icon: 'FileText',
     category: 'file',
-    path: '/tools/file/word-to-pdf'
+    path: '/tools/file/word-to-pdf',
+    featured: true
   },
   {
     id: 'powerpoint-to-pdf',
@@ -194,7 +196,8 @@ export const tools: Tool[] = [
     description: 'Convert PowerPoint presentations to PDF',
     icon: 'Presentation',
     category: 'file',
-    path: '/tools/file/powerpoint-to-pdf'
+    path: '/tools/file/powerpoint-to-pdf',
+    featured: true
   },
   {
     id: 'excel-to-pdf',
@@ -202,7 +205,8 @@ export const tools: Tool[] = [
     description: 'Convert Excel spreadsheets to PDF format',
     icon: 'Table',
     category: 'file',
-    path: '/tools/file/excel-to-pdf'
+    path: '/tools/file/excel-to-pdf',
+    featured: true
   },
   {
     id: 'html-to-pdf',
@@ -210,7 +214,8 @@ export const tools: Tool[] = [
     description: 'Convert HTML files to PDF documents',
     icon: 'Code',
     category: 'file',
-    path: '/tools/file/html-to-pdf'
+    path: '/tools/file/html-to-pdf',
+    featured: true
   },
 
   // Convert from PDF Tools
@@ -228,7 +233,8 @@ export const tools: Tool[] = [
     description: 'Convert PDF documents to Word format',
     icon: 'FileText',
     category: 'file',
-    path: '/tools/file/pdf-to-word'
+    path: '/tools/file/pdf-to-word',
+    featured: true
   },
   {
     id: 'pdf-to-powerpoint',
@@ -236,7 +242,8 @@ export const tools: Tool[] = [
     description: 'Convert PDF to PowerPoint presentation',
     icon: 'Presentation',
     category: 'file',
-    path: '/tools/file/pdf-to-powerpoint'
+    path: '/tools/file/pdf-to-powerpoint',
+    featured: true
   },
   {
     id: 'pdf-to-excel',
@@ -244,7 +251,8 @@ export const tools: Tool[] = [
     description: 'Convert PDF tables to Excel spreadsheets',
     icon: 'Table',
     category: 'file',
-    path: '/tools/file/pdf-to-excel'
+    path: '/tools/file/pdf-to-excel',
+    featured: true
   },
   {
     id: 'pdf-to-pdfa',
@@ -252,7 +260,8 @@ export const tools: Tool[] = [
     description: 'Convert PDF to PDF/A format for archiving',
     icon: 'Archive',
     category: 'file',
-    path: '/tools/file/pdf-to-pdfa'
+    path: '/tools/file/pdf-to-pdfa',
+    featured: true
   },
 
   // Edit PDF Tools
@@ -304,7 +313,8 @@ export const tools: Tool[] = [
     description: 'Remove password protection from PDF files',
     icon: 'Unlock',
     category: 'file',
-    path: '/tools/file/unlock-pdf'
+    path: '/tools/file/unlock-pdf',
+    featured: true
   },
   {
     id: 'pdf-password',
@@ -321,7 +331,8 @@ export const tools: Tool[] = [
     description: 'Add digital signatures to PDF documents',
     icon: 'PenTool',
     category: 'file',
-    path: '/tools/file/sign-pdf'
+    path: '/tools/file/sign-pdf',
+    featured: true
   },
   {
     id: 'redact-pdf',
@@ -329,7 +340,8 @@ export const tools: Tool[] = [
     description: 'Remove sensitive information from PDF files',
     icon: 'EyeOff',
     category: 'file',
-    path: '/tools/file/redact-pdf'
+    path: '/tools/file/redact-pdf',
+    featured: true
   },
   {
     id: 'compare-pdf',
@@ -337,7 +349,8 @@ export const tools: Tool[] = [
     description: 'Compare two PDF documents for differences',
     icon: 'GitCompare',
     category: 'file',
-    path: '/tools/file/compare-pdf'
+    path: '/tools/file/compare-pdf',
+    featured: true
   },
 
   // Other File Tools
