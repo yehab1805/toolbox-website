@@ -87,14 +87,23 @@ export const tools: Tool[] = [
     path: '/tools/business/qr-generator'
   },
 
-  // File & Document Tools
+  // PDF Organizer Tools
+  {
+    id: 'organize-pdf',
+    name: 'Organize PDF',
+    description: 'Sort and organize PDF pages automatically',
+    icon: 'FileText',
+    category: 'file',
+    path: '/tools/file/organize-pdf'
+  },
   {
     id: 'merge-pdf',
     name: 'Merge PDFs',
     description: 'Combine multiple PDF files into one',
     icon: 'FilePlus',
     category: 'file',
-    path: '/tools/file/merge-pdf'
+    path: '/tools/file/merge-pdf',
+    featured: true
   },
   {
     id: 'split-pdf',
@@ -105,21 +114,233 @@ export const tools: Tool[] = [
     path: '/tools/file/split-pdf'
   },
   {
+    id: 'remove-pages',
+    name: 'Remove Pages',
+    description: 'Remove specific pages from PDF documents',
+    icon: 'FileX',
+    category: 'file',
+    path: '/tools/file/remove-pages'
+  },
+  {
+    id: 'extract-pages',
+    name: 'Extract Pages',
+    description: 'Extract specific pages from PDF documents',
+    icon: 'FileUp',
+    category: 'file',
+    path: '/tools/file/extract-pages'
+  },
+  {
+    id: 'scan-to-pdf',
+    name: 'Scan to PDF',
+    description: 'Convert scanned images to searchable PDF',
+    icon: 'FileUp',
+    category: 'file',
+    path: '/tools/file/scan-to-pdf'
+  },
+  {
+    id: 'optimize-pdf',
+    name: 'Optimize PDF',
+    description: 'Optimize PDF files for better performance',
+    icon: 'Zap',
+    category: 'file',
+    path: '/tools/file/optimize-pdf'
+  },
+  {
     id: 'compress-pdf',
     name: 'Compress PDFs',
     description: 'Reduce PDF file size while maintaining quality',
     icon: 'Archive',
     category: 'file',
-    path: '/tools/file/compress-pdf'
+    path: '/tools/file/compress-pdf',
+    featured: true
+  },
+  {
+    id: 'repair-pdf',
+    name: 'Repair PDF',
+    description: 'Fix corrupted or damaged PDF files',
+    icon: 'Wrench',
+    category: 'file',
+    path: '/tools/file/repair-pdf'
+  },
+  {
+    id: 'ocr-pdf',
+    name: 'OCR PDF',
+    description: 'Extract text from scanned PDF documents',
+    icon: 'Search',
+    category: 'file',
+    path: '/tools/file/ocr-pdf'
+  },
+
+  // Convert to PDF Tools
+  {
+    id: 'jpg-to-pdf',
+    name: 'JPG to PDF',
+    description: 'Convert JPG images to PDF documents',
+    icon: 'Image',
+    category: 'file',
+    path: '/tools/file/image-to-pdf'
+  },
+  {
+    id: 'word-to-pdf',
+    name: 'Word to PDF',
+    description: 'Convert Word documents to PDF format',
+    icon: 'FileText',
+    category: 'file',
+    path: '/tools/file/word-to-pdf'
+  },
+  {
+    id: 'powerpoint-to-pdf',
+    name: 'PowerPoint to PDF',
+    description: 'Convert PowerPoint presentations to PDF',
+    icon: 'Presentation',
+    category: 'file',
+    path: '/tools/file/powerpoint-to-pdf'
+  },
+  {
+    id: 'excel-to-pdf',
+    name: 'Excel to PDF',
+    description: 'Convert Excel spreadsheets to PDF format',
+    icon: 'Table',
+    category: 'file',
+    path: '/tools/file/excel-to-pdf'
+  },
+  {
+    id: 'html-to-pdf',
+    name: 'HTML to PDF',
+    description: 'Convert HTML files to PDF documents',
+    icon: 'Code',
+    category: 'file',
+    path: '/tools/file/html-to-pdf'
+  },
+
+  // Convert from PDF Tools
+  {
+    id: 'pdf-to-jpg',
+    name: 'PDF to JPG',
+    description: 'Convert PDF pages to JPG images',
+    icon: 'Image',
+    category: 'file',
+    path: '/tools/file/pdf-to-jpg'
+  },
+  {
+    id: 'pdf-to-word',
+    name: 'PDF to Word',
+    description: 'Convert PDF documents to Word format',
+    icon: 'FileText',
+    category: 'file',
+    path: '/tools/file/pdf-to-word'
+  },
+  {
+    id: 'pdf-to-powerpoint',
+    name: 'PDF to PowerPoint',
+    description: 'Convert PDF to PowerPoint presentation',
+    icon: 'Presentation',
+    category: 'file',
+    path: '/tools/file/pdf-to-powerpoint'
+  },
+  {
+    id: 'pdf-to-excel',
+    name: 'PDF to Excel',
+    description: 'Convert PDF tables to Excel spreadsheets',
+    icon: 'Table',
+    category: 'file',
+    path: '/tools/file/pdf-to-excel'
+  },
+  {
+    id: 'pdf-to-pdfa',
+    name: 'PDF to PDF/A',
+    description: 'Convert PDF to PDF/A format for archiving',
+    icon: 'Archive',
+    category: 'file',
+    path: '/tools/file/pdf-to-pdfa'
+  },
+
+  // Edit PDF Tools
+  {
+    id: 'rotate-pdf',
+    name: 'Rotate PDF',
+    description: 'Rotate PDF pages to correct orientation',
+    icon: 'RotateCcw',
+    category: 'file',
+    path: '/tools/file/rotate-pdf'
+  },
+  {
+    id: 'add-page-numbers',
+    name: 'Add Page Numbers',
+    description: 'Add page numbers to PDF documents',
+    icon: 'Hash',
+    category: 'file',
+    path: '/tools/file/add-page-numbers'
+  },
+  {
+    id: 'watermark-pdf',
+    name: 'Add Watermark',
+    description: 'Add watermarks to PDF documents',
+    icon: 'Stamp',
+    category: 'file',
+    path: '/tools/file/watermark-pdf'
+  },
+  {
+    id: 'crop-pdf',
+    name: 'Crop PDF',
+    description: 'Crop PDF pages to remove unwanted areas',
+    icon: 'Crop',
+    category: 'file',
+    path: '/tools/file/crop-pdf'
+  },
+  {
+    id: 'edit-pdf',
+    name: 'Edit PDF',
+    description: 'Add text, highlights, and drawings to PDF',
+    icon: 'Edit',
+    category: 'file',
+    path: '/tools/file/edit-pdf'
+  },
+
+  // PDF Security Tools
+  {
+    id: 'unlock-pdf',
+    name: 'Unlock PDF',
+    description: 'Remove password protection from PDF files',
+    icon: 'Unlock',
+    category: 'file',
+    path: '/tools/file/unlock-pdf'
   },
   {
     id: 'pdf-password',
-    name: 'PDF Password',
-    description: 'Add or remove passwords from PDF files',
+    name: 'Protect PDF',
+    description: 'Add password protection to PDF files',
     icon: 'Lock',
     category: 'file',
-    path: '/tools/file/pdf-password'
+    path: '/tools/file/pdf-password',
+    featured: true
   },
+  {
+    id: 'sign-pdf',
+    name: 'Sign PDF',
+    description: 'Add digital signatures to PDF documents',
+    icon: 'PenTool',
+    category: 'file',
+    path: '/tools/file/sign-pdf'
+  },
+  {
+    id: 'redact-pdf',
+    name: 'Redact PDF',
+    description: 'Remove sensitive information from PDF files',
+    icon: 'EyeOff',
+    category: 'file',
+    path: '/tools/file/redact-pdf'
+  },
+  {
+    id: 'compare-pdf',
+    name: 'Compare PDF',
+    description: 'Compare two PDF documents for differences',
+    icon: 'GitCompare',
+    category: 'file',
+    path: '/tools/file/compare-pdf'
+  },
+
+  // Other File Tools
   {
     id: 'image-converter',
     name: 'Image Converter',

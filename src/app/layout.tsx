@@ -8,6 +8,7 @@ import HydrationFix from "@/components/hydration-fix";
 import PageLoading from "@/components/page-loading";
 import NavigationFeedback from "@/components/navigation-feedback";
 import { Toaster } from "react-hot-toast";
+import { generateWebsiteSchema, generateOrganizationSchema } from "@/lib/schema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,11 +20,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "ToolBox - All-in-One Digital Toolbox",
-    template: "%s | ToolBox"
+    default: "PDF Tools Online - Free PDF Editor & Converter | ToolBox",
+    template: "%s | PDF Tools Online"
   },
-  description: "Access 25+ free online tools for studying, business, file management, and daily tasks. No registration required, no hidden costs.",
-  keywords: "online tools, free tools, productivity, study tools, business tools, file tools, PDF tools, calculators, converters",
+  description: "Free online PDF tools for editing, converting, merging, splitting, and managing PDF documents. 25+ PDF tools including merge, split, compress, rotate, watermark, and more. No registration required.",
+  keywords: "PDF tools, PDF editor, PDF converter, merge PDF, split PDF, compress PDF, rotate PDF, PDF watermark, PDF password, PDF to JPG, JPG to PDF, free PDF tools, online PDF editor",
   authors: [{ name: "ToolBox Team" }],
   creator: "ToolBox Team",
   publisher: "ToolBox",
@@ -42,22 +43,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://toolbox-website.vercel.app",
-    siteName: "ToolBox",
-    title: "ToolBox - All-in-One Digital Toolbox",
-    description: "Access 25+ free online tools for studying, business, file management, and daily tasks. No registration required, no hidden costs.",
+    siteName: "PDF Tools Online",
+    title: "PDF Tools Online - Free PDF Editor & Converter",
+    description: "Free online PDF tools for editing, converting, merging, splitting, and managing PDF documents. 25+ PDF tools including merge, split, compress, rotate, watermark, and more.",
     images: [
       {
         url: "https://toolbox-website.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ToolBox - All-in-One Digital Toolbox",
+        alt: "PDF Tools Online - Free PDF Editor & Converter",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ToolBox - All-in-One Digital Toolbox",
-    description: "Access 25+ free online tools for studying, business, file management, and daily tasks. No registration required, no hidden costs.",
+    title: "PDF Tools Online - Free PDF Editor & Converter",
+    description: "Free online PDF tools for editing, converting, merging, splitting, and managing PDF documents. 25+ PDF tools including merge, split, compress, rotate, watermark, and more.",
     images: ["https://toolbox-website.vercel.app/og-image.png"],
     creator: "@toolbox",
   },
@@ -80,6 +81,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateWebsiteSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateOrganizationSchema()),
+          }}
+        />
         {/* Google AdSense */}
         <script 
           async 

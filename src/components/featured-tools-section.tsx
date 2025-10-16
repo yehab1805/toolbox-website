@@ -3,13 +3,16 @@
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Calculator, Receipt, Smile } from 'lucide-react'
+import { Calculator, Receipt, Smile, FilePlus, Archive, Lock } from 'lucide-react'
 import { featuredTools } from '@/lib/tools'
 
 const iconMap = {
   Calculator,
   Receipt,
-  Smile
+  Smile,
+  FilePlus,
+  Archive,
+  Lock
 }
 
 export default function FeaturedToolsSection() {

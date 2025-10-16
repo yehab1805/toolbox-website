@@ -74,7 +74,7 @@ export default function HeroSection() {
           <div className="mb-8">
             <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6">
               <Sparkles className="h-4 w-4 mr-2" />
-              All-in-One Toolbox for Students & Professionals
+              Professional PDF Tools + 50+ Free Online Utilities
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
@@ -84,8 +84,8 @@ export default function HeroSection() {
               </span>
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Access 25+ free online tools for studying, business, file management, and daily tasks. 
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Professional PDF processing tools plus 50+ free online utilities for studying, business, file management, and daily tasks. 
               No registration required, no hidden costs.
             </p>
           </div>
@@ -114,13 +114,13 @@ export default function HeroSection() {
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="text-lg px-8 py-3">
-              <Link href="#tools">
-                Explore All Tools
+              <Link href="#pdf-tools">
+                PDF Tools
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3">
-              <Link href="#categories">
-                Browse Categories
+              <Link href="#tools">
+                All Tools
               </Link>
             </Button>
           </div>
@@ -131,8 +131,8 @@ export default function HeroSection() {
               <div className="flex items-center justify-center w-12 h-12 mx-auto mb-3 rounded-full bg-green-100 text-green-600">
                 <Zap className="h-6 w-6" />
               </div>
-              <div className="text-2xl font-bold">25+ Tools</div>
-              <div className="text-sm text-muted-foreground">Free online utilities</div>
+              <div className="text-2xl font-bold">50+ Tools</div>
+              <div className="text-sm text-muted-foreground">Including PDF processing</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-12 h-12 mx-auto mb-3 rounded-full bg-blue-100 text-blue-600">

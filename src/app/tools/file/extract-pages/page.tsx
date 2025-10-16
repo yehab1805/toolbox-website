@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const SplitPDF = dynamic(() => import('@/components/tools/file/split-pdf'), {
+const ExtractPages = dynamic(() => import('@/components/tools/file/extract-pages'), {
   ssr: false,
   loading: () => (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
@@ -15,7 +15,6 @@ const SplitPDF = dynamic(() => import('@/components/tools/file/split-pdf'), {
   ),
 });
 
-
-export default function SplitPDFPage() {
-  return <SplitPDF />;
+export default function ExtractPagesPage() {
+  return <ExtractPages />;
 }
